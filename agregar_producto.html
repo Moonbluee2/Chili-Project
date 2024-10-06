@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Agregar Producto</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Agregar Nuevo Producto</h1>
+        <form action="agregar_producto.php" method="post" enctype="multipart/form-data">
+            <label for="name">Nombre del Producto</label>
+            <input type="text" id="name" name="name" placeholder="Nombre del producto" required>
+            
+            <label for="description">Descripción</label>
+            <textarea id="description" name="description" placeholder="Descripción del producto" required></textarea>
+            
+            <label for="price">Precio</label>
+            <input type="number" id="price" name="price" step="0.01" placeholder="Precio en USD" required>
+            
+            <label for="image">Imagen del Producto</label>
+            <input type="file" id="image" name="image" accept="image/*" required>
+            
+            <button type="submit">Agregar Producto</button>
+        </form>
+    </div>
+</body>
+</html>

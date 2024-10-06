@@ -14,7 +14,7 @@ $sellers_result = $conn->query($sellers_sql);
 <head>
     <meta charset="UTF-8">
     <title>Página Inicial - Mercado Mexicano</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <header>
@@ -26,6 +26,11 @@ $sellers_result = $conn->query($sellers_sql);
     </header>
     <main>
         <?php
+        // Mostrar mensajes si existen
+        if (isset($_GET['message'])) {
+            echo "<div class='message'>" . htmlspecialchars($_GET['message']) . "</div>";
+        }
+
         if ($sellers_result->num_rows > 0) {
             while($seller = $sellers_result->fetch_assoc()) {
                 // Obtener los productos del vendedor
@@ -44,7 +49,10 @@ $sellers_result = $conn->query($sellers_sql);
                         echo "<h3>" . htmlspecialchars($product['name']) . "</h3>";
                         echo "<p>" . htmlspecialchars($product['description']) . "</p>";
                         echo "<p class='price'>$" . number_format($product['price'], 2) . "</p>";
-                        echo "<button>Añadir a Favoritos</button>";
+                        echo "<form action='add_favorite.php' method='post'>";
+                        echo "<input type='hidden' name='product_id' value='" . $product['id'] . "'>";
+                        echo "<button type='submit'>Añadir a Favoritos</button>";
+                        echo "</form>";
                         echo "</div>";
                     }
                     
