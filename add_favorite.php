@@ -3,7 +3,7 @@ session_start();
 
 // Verificar si el usuario está logueado y es cliente
 if (!isset($_SESSION['user_id']) || $_SESSION['role'] != 'cliente') {
-    header("Location: login.html");
+    header("Location: Login.html");
     exit();
 }
 

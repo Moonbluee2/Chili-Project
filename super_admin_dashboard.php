@@ -10,7 +10,7 @@ checkRole('super_admin');
 <head>
     <meta charset="UTF-8">
     <title>Dashboard Super Administrador</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header>

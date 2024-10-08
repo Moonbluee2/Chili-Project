@@ -38,7 +38,7 @@ header nav a {
 }
 
 header nav a:hover {
-    color: #E91E63; /* Mantiene el mismo color al pasar el mouse */
+    color: #FFCDD2; /* Rosa claro para el efecto hover */
 }
 
 /* Main */
@@ -66,6 +66,7 @@ main {
     display: flex;
     flex-wrap: wrap;
     gap: 1.5rem;
+    justify-content: center; /* Centrar los productos */
 }
 
 /* Tarjeta de Producto */
@@ -77,6 +78,9 @@ main {
     width: calc(33.333% - 1rem);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
     transition: transform 0.3s, box-shadow 0.3s;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .product-card:hover {
@@ -169,5 +173,144 @@ footer p {
 
     .seller-section h2 {
         font-size: 1.5rem;
+    }
+}
+
+/* ---------------------------------------------------------------- */
+/* Estilos para las páginas de Login y Registro */
+.container {
+    width: 100%;
+    max-width: 400px;
+    margin: 2rem auto; /* Centramos el contenedor */
+    padding: 2rem;
+    background-color: #1d1d1d; /* Fondo del contenedor */
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+h1 {
+    color: #E91E63; /* Rosa mexicano */
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: #fff; /* Texto blanco */
+}
+
+input {
+    width: 100%;
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+    border: 1px solid #E91E63; /* Rosa mexicano */
+    border-radius: 8px;
+    background-color: #2c2c2c; /* Fondo de los inputs */
+    color: #fff; /* Texto blanco */
+}
+
+input::placeholder {
+    color: #bbb; /* Color del placeholder */
+}
+
+button {
+    width: 100%;
+    padding: 0.5rem;
+    background-color: #16a085; /* Rosa mexicano */
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #d81b60; /* Rosa más oscuro */
+}
+
+.text-link {
+    text-align: center;
+    margin-top: 1rem;
+}
+
+.text-link a {
+    color: #E91E63; /* Rosa mexicano */
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.text-link a:hover {
+    color: #d81b60; /* Rosa más oscuro */
+}
+
+/* Mensajes de error */
+.error-message {
+    background-color: #e74c3c; /* Rojo para errores */
+    color: #fff;
+    padding: 1rem;
+    border-radius: 8px;
+    margin-bottom: 1.5rem;
+    text-align: center;
+    font-weight: bold;
+}
+
+/* ---------------------------------------------------------------- */
+/* Estilos para Acceso Denegado */
+.access-denied-container {
+    background-color: #000;
+    padding: 90px;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    width: 100%;
+    max-width: 500px;
+    margin: 2rem auto; /* Centrar el contenedor */
+    text-align: center;
+}
+
+.access-denied-container h1 {
+    color: #e74c3c; /* Rojo para destacar el mensaje */
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.access-denied-container p {
+    font-size: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.access-denied-container a {
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    background-color: #16a085; /* Verde mexicano */
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.access-denied-container a:hover {
+    background-color: #1abc9c; /* Verde brillante */
+}
+
+/* Responsividad para Acceso Denegado */
+@media (max-width: 600px) {
+    .access-denied-container {
+        padding: 1.5rem;
+    }
+
+    .access-denied-container h1 {
+        font-size: 1.5rem;
+    }
+
+    .access-denied-container p {
+        font-size: 0.9rem;
+    }
+
+    .access-denied-container a {
+        width: 100%;
+        padding: 0.75rem;
     }
 }

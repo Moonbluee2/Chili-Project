@@ -10,7 +10,7 @@ function isLoggedIn() {
 // Función para verificar el rol del usuario
 function checkRole($required_role) {
     if (!isLoggedIn()) {
-        header("Location: login.html");
+        header("Location: Login.html");
         exit();
     }
 
@@ -24,7 +24,7 @@ function checkRole($required_role) {
 // Función para verificar si el usuario tiene uno de los roles permitidos
 function checkRoles($allowed_roles = []) {
     if (!isLoggedIn()) {
-        header("Location: login.html");
+        header("Location: Login.html");
         exit();
     }
 

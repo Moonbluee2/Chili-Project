@@ -14,7 +14,7 @@ $sellers_result = $conn->query($sellers_sql);
 <head>
     <meta charset="UTF-8">
     <title>Página Inicial - Mercado Mexicano</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header>
